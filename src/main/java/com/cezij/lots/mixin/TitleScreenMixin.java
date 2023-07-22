@@ -1,6 +1,6 @@
 package com.cezij.lots.mixin;
 
-import com.cezij.lots.lots;
+import com.cezij.lots.LOTS;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class TitleScreenMixin {
 	@Inject(method = "init", at = @At("TAIL"))
 	public void onInit(CallbackInfo ci) {
-		lots.LOGGER.info("This line is printed by an example mod mixin!");
+		LOTS.LOGGER.info("This line is printed by an example mod mixin!");
 	}
 }
